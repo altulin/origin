@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru")
+
+  include ../modules/_head
+
+  body.page-body
+    include ../helpers/arrays
+
+    block link-active
+    if header 
+      include ../modules/_header
+
+    
+
+      
+    main.page-main
+      block content
+
+    
+    block link-active
+    if header
+      include ../modules/_footer
+
+    
+
+
+      include ../modules/_modal-request
+      include ../modules/_modal-thanks
+      include ../modules/_modal-case
+      include ../modules/_scripts

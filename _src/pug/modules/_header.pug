@@ -1,0 +1,34 @@
+header.header   
+  .header__inner.container 
+    a.header__logo.logo(href="/index.html") 
+      +img-retina(`logo`, `png`, `logo__img`, `логотип`, `188`, `35`) 
+
+    .header__box
+
+      a.header__phone.phone.hover-opacity(href="tel:+491570156") 
+        +svg(`phone`, `14`, `#4D545B`)
+        span.phone__text 8 800 555 55 55  
+
+      a.header__link.btn-1.hover-opacity(href="#modal-request" rel="modal:open") Получить консультацию
+
+      a.header__link-menu.header__link-menu--open.hover-opacity(href="#header-nav") 
+        +svg(`menu-open-grey`, `20`, `#4D545B`)
+        span.header__link-menu-text открыть меню
+
+      a.header__link-menu.header__link-menu--close.hidden.hover-opacity(href="#header-nav") 
+        +svg(`modal-close`, `20`, `#4D545B`)
+        span.header__link-menu-text закрыть меню
+
+    
+
+    nav.header__nav#header-nav
+      a.header__link-menu.header__link-menu--close.hidden.hover-opacity(href="#header-nav") 
+        +svg(`modal-close`, `20`, `#4D545B`)
+          span.header__link-menu-text закрыть меню
+      ul.header-nav__list
+        each item in header_nav
+          li.header-nav__item 
+            a.header-nav__link.hover-opacity(href=`${item[1]}`) 
+              span.header-nav__link-text= `${item[0]}`
+  
+              

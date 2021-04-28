@@ -1,0 +1,120 @@
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+* // adaptive slick slider
+  min-width: 0
+  min-height: 0
+
+html
+  box-sizing: border-box
+  font-size: 16px
+
+  // +mw(768)
+    // font-size: calc(16px + 6 * ((100vw - 320px) / 680))
+    // font-size: 18px
+
+body
+  width: 100%
+  min-height: 100vh
+  +font(EuclidSquare)
+  line-height: 1.2
+
+a
+  text-decoration: none
+
+img
+  max-width: 100%
+  height: auto
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+fieldset,
+ul
+  margin: 0
+
+ul
+  padding-left: 0
+
+li
+  list-style: none
+
+input,
+textarea,
+button,
+select,
+a
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+fieldset
+  padding: 0
+  border: none
+
+button,
+input,
+a
+
+  &:focus
+    outline: none
+
+button
+  padding: 0
+  border: none
+
+.size-0
+  font-size: rem(12)
+
+.size-1
+  font-size: rem(14)
+
+.size-2
+  font-size: rem(16)
+
+.size-3
+  font-size: rem(18)
+
+.size-4
+  font-size: rem(20)
+
+.container
+  max-width: 1270px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
+
+.hover-opacity
+  transition: 0.2s
+
+  &:hover
+    opacity: 0.5
+
+.tablet-visibility
+  display: none
+
+  +mw(768)
+    display: block
+
+.tablet-hidden
+
+  +mw(768)
+    display: none
+
+.phone-visibility
+  display: none
+
+  +mw(600)
+    display: block
+
+.phone-hidden
+
+  +mw(600)
+    display: none
+
+*
+  // outline: 1px solid tomato
