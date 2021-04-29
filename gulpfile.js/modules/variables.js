@@ -1,13 +1,14 @@
-const projectName = `colibri` // название проекта
+const projectName = `original` // название проекта
 const distFolder = `${projectName}_dist`; //Папка продакшн
 const srcFolder = `_src`;  // Папка разработки
 
-module.exports.plugunsJsUsed = [`jquery_js`, `myJsLibs`, `myJsFile`];
-module.exports.plugunsCssUsed = [`normalize_css`, `myCssLibs`, `myCssFile`];
+module.exports.plugunsJsUsed = [`jquery_js`, `mmenu_js`, `glightbox_js`, `myJsLibs`, `myJsFile`];
+module.exports.plugunsCssUsed = [`normalize_css`, `mmenu_css`, `glightbox_js`, `myCssLibs`, `myCssFile`];
 
 module.exports.plugunsJs = new Map([
   [`jquery_js`, `node_modules/jquery/dist/jquery.min.js`],
   [`jquery_modal_js`, `node_modules/jquery-modal/jquery.modal.min.js`],
+  [`glightbox_js`, `node_modules/glightbox/dist/js/glightbox.min.js`],
   [`mmenu_js`, `node_modules/mmenu-light/dist/mmenu-light.js`],
   [`slick_js`, `node_modules/slick-carousel/slick/slick.min.js`],
   [`inputmask_js`, `node_modules/inputmask/dist/jquery.inputmask.min.js`],
@@ -20,6 +21,7 @@ module.exports.plugunsJs = new Map([
 module.exports.plugunsCss = new Map([
   [`normalize_css`, `node_modules/normalize.css/normalize.css`],
   [`jquery_modal_css`, `node_modules/jquery-modal/jquery.modal.min.css`],
+  [`glightbox_js`, `node_modules/glightbox/dist/css/glightbox.min.css`],
   [`mmenu_css`, `node_modules/mmenu-light/dist/mmenu-light.css`],
   [`jquery_formstyler_css`, `node_modules/jquery-form-styler/dist/jquery.formstyler.css`],
   [`jquery_formstyler_theme_css`, `node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css`],
@@ -52,6 +54,7 @@ module.exports.path = {
     vectorImg: `${srcFolder}/_img/svg/*.svg`,
     webpImg: `${srcFolder}/_img/webp/*.{png,jpg}`,
     pugFiles: `${srcFolder}/pug/pages/*.pug`,
+    pugFolder: `${srcFolder}/pug/`,
     sassFiles: `${srcFolder}/sass/**/*.sass`,
   },
   made: {

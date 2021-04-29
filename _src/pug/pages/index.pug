@@ -1,7 +1,21 @@
 extends ../templates/_main.pug
 include ../helpers/mixins.pug
 
-block link-active
+  block link-active
+    - page_index = true
 
 
 block content
+  section.promo   
+    .promo__inner.container
+      .promo__left-col
+        h1.promo__title.title Ремонт любых <br><span class="title__flag"></span> немецких автомобилей с&nbsp;гарантией результата
+        p.promo__text.size-3 Мы уверены в качестве своей работы и надежности запчастей, поэтому даем Гарантию, которая позволит Вам чувствовать себе уверенным и защищенным от возможных проблем.
+      .promo__right-col
+        figure.promo__img-wrap  
+          +img-retina(`promo-bg`, `png`, `Ремонт любых немецких автомобилей`, `promo__img`, `921`, `518`)
+          a.promo__link(href="https://youtu.be/d-oTtt5cawg")
+            +img-retina(`btn`, `png`, `кнопка`, `promo__btn`, `136`, `136`)
+
+
+

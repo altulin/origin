@@ -6,25 +6,34 @@ html(lang="ru")
   body.page-body
     include ../helpers/arrays
 
-    block link-active
-    if header 
-      include ../modules/_header
+    //- block link-active
+    //- if header 
+    include ../modules/_header
 
     
 
+    block link-active
+    if page_index
+      main.page-main-index
+        block content
+    else 
+      main.page-main
+        block content
+
+    
+    block link-active
+    if page_index
+      include ../modules/_footer-index
+    else 
+      //- include ../modules/_footer
       
-    main.page-main
-      block content
-
-    
-    block link-active
-    if header
-      include ../modules/_footer
 
     
 
 
-      include ../modules/_modal-request
-      include ../modules/_modal-thanks
-      include ../modules/_modal-case
-      include ../modules/_scripts
+      //- include ../modules/_modal-request
+      //- include ../modules/_modal-thanks
+      //- include ../modules/_modal-case
+    include ../modules/_scripts
+
+    

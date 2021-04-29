@@ -21,6 +21,11 @@ body
   +font(EuclidSquare)
   line-height: 1.2
 
+  color: #FCFCFD
+
+  display: flex
+  flex-direction: column
+
 a
   text-decoration: none
 
@@ -116,5 +121,22 @@ button
   +mw(600)
     display: none
 
+.page-main-index
+  flex-grow: 1
+  background-color: $black
+  display: flex
+  flex-direction: column
+  justify-content: center
+  overflow: hidden
+  // align-items: center
+
+  +mw(768)
+    display: block
+
+.page-main
+  flex-grow: 1
+  background-color: #010101
+  padding-top: 150px
+
 *
-  // outline: 1px solid tomato
+  outline: 1px solid tomato

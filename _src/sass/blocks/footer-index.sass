@@ -1,0 +1,49 @@
+.footer-index
+  margin-top: -80px
+
+  +mw(768)
+    display: none
+
+  &__list
+    width: 100%
+    display: flex
+
+  &__item
+    width: 25%
+    // border: 1px solid #484D55
+    // overflow: hidden
+
+    &:first-child
+
+      a
+        border-radius: 10px 0 0 0
+
+    &:last-child
+      a
+        border-radius: 0 10px 0 0
+
+    & + li
+      a
+        border-left: none
+
+  &__link
+    +font(Montserrat)
+    font-weight: 600
+    text-transform:
+    color: $white
+    padding-top: 31px
+    padding-bottom: 31px
+    display: block
+    text-align: center
+    background-image: linear-gradient(180deg, #545556 0%, #0B0B0B 100%)
+    text-transform: uppercase
+    border: 1px solid #484D55
+
+  &__link--current
+    background-image: linear-gradient(180deg, #B8354C 0%, #C20123 100%)
+
+  &__link-text
+
+.container
+
+.hover-opacity

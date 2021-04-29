@@ -1,0 +1,39 @@
+.breadcrumbs
+
+  &__inner
+
+  &__list
+    display: flex
+    align-items: center
+
+  &__item
+
+    & + li
+      margin-left: 10px
+      display: flex
+      align-items: center
+
+      &::before
+        content: ""
+
+    &::before
+
+      width: 15px
+      height: 15px
+      background-image: url(/img/svg/arr.svg)
+      display: block
+      margin-right: 10px
+
+  &__link
+    color: #747682
+
+  &__item--current
+
+    &::before
+      background-image: url(/img/svg/arr-current.svg)
+
+    & a
+      color: #524F55
+      pointer-events: none
+
+.container

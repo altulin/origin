@@ -1,0 +1,122 @@
+.header
+  margin-bottom: -150px
+  z-index: 1
+
+  +mw(768)
+    margin-bottom: -60px
+
+  &__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 45px
+    padding-bottom: 45px
+
+    +mw(768)
+      padding-top: 0
+      padding-bottom: 0
+
+  &__logo
+    width: 132px
+    height: 18px
+
+  &__slogan
+    color: #8D8F9E
+    font-weight: 300
+    margin-left: 40px
+
+    +mw(600)
+      display: none
+
+  &__phone
+    margin-left: auto
+
+  &__link-menu--open
+    width: 60px
+    height: 60px
+    justify-content: center
+    align-items: center
+    display: none
+
+    +mw(768)
+      display: flex
+
+    & .icon
+      padding-top: 8px
+
+  &__link-menu-text
+    font-size: 0
+
+  &__link
+    background-color: rgba($white, 0.1)
+    border: 1px solid rgba(#E5E5E5, 0.1)
+    box-sizing: border-box
+    backdrop-filter: blur(4px)
+    color: #8D8F9E
+    font-weight: 600
+    text-transform: uppercase
+    padding-left: 21px
+    padding-right: 22px
+    padding-top: 21px
+    padding-bottom: 22px
+    margin-left: 40px
+
+    border-radius: 5px
+
+.logo
+  position: relative
+
+  &__flag-wrap
+    position: absolute
+    width: 14px
+    height: 10px
+    background-image: url(/img/svg/flag.svg)
+    background-repeat: no-repeat
+    background-size: 14px 10px
+    background-position: center center
+    left: 100%
+    top: 0
+
+    &::after
+      content: ""
+      position: absolute
+      width: 17px
+      height: 17px
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      background: #FFFFFF
+      opacity: 0.9
+      z-index: -1
+      filter: blur(12px)
+
+  &__img-wrap
+    height: 18px
+    width: 132px
+
+  &__img
+    fill: #FCFCFD
+    width: 132px
+    height: 18px
+
+  &__text
+    width: 100%
+    max-height: 18px
+    fill: #FCFCFD
+
+.phone
+
+  +mw(768)
+    width: 60px
+    height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    & .icon svg
+      transform: scale(1.7)
+
+  &__text
+    margin-left: 10px
+    color: #8D8F9E
+    font-weight: 600

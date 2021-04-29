@@ -1,0 +1,25 @@
+extends ../templates/_main.pug
+include ../helpers/mixins.pug
+
+  //- block link-active
+  //-   - page_index = true
+
+
+block content
+  include ../modules/_breadcrumbs.pug
+  section.warranty-head
+    .warranty-head__inner.container
+
+
+      figure.warranty-head__img-wrap 
+        +img-retina(`warranty-head-bg`, `png`, `Гарантийная политика`, `warranty-head__img`, `1440`, `479`)
+
+      .warranty-head__promo.warranty-head-promo
+        h1.warranty-head__title.title Гарантийная политика
+        .warranty-head__down.down
+          figure.down__img-wrap
+            
+
+
+        
+
