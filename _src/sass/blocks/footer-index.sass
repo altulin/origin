@@ -1,26 +1,40 @@
 .footer-index
   margin-top: -80px
+  z-index: 1
 
-  +mw(768)
-    display: none
+  +mw(1000)
+    margin-top: 26px
+    margin-bottom: 30px
 
   &__list
     width: 100%
     display: flex
+
+    +mw(1000)
+      flex-direction: column
 
   &__item
     width: 25%
     // border: 1px solid #484D55
     // overflow: hidden
 
+    +mw(1000)
+      width: 100%
+
     &:first-child
 
       a
         border-radius: 10px 0 0 0
 
+        +mw(1000)
+          border-radius: 10px 10px 0 0
+
     &:last-child
       a
         border-radius: 0 10px 0 0
+
+        +mw(1000)
+          border-radius: 0 0 10px 10px
 
     & + li
       a
@@ -35,12 +49,16 @@
     padding-bottom: 31px
     display: block
     text-align: center
-    background-image: linear-gradient(180deg, #545556 0%, #0B0B0B 100%)
+    background-image: linear-gradient(180deg, #414243 0%, #151515 118.42%)
     text-transform: uppercase
     border: 1px solid #484D55
 
+    +mw(1000)
+      background-image: linear-gradient(90deg, #414243 0%, #151515 93.34%)
+
   &__link--current
-    background-image: linear-gradient(180deg, #B8354C 0%, #C20123 100%)
+    background-image: radial-gradient(50% 750.78% at 50% 50%, #CE1234 0%, #62101E 100%)
+    border-color: #C14E62
 
   &__link-text
 

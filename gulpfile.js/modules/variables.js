@@ -2,8 +2,8 @@ const projectName = `original` // название проекта
 const distFolder = `${projectName}_dist`; //Папка продакшн
 const srcFolder = `_src`;  // Папка разработки
 
-module.exports.plugunsJsUsed = [`jquery_js`, `mmenu_js`, `glightbox_js`, `myJsLibs`, `myJsFile`];
-module.exports.plugunsCssUsed = [`normalize_css`, `mmenu_css`, `glightbox_js`, `myCssLibs`, `myCssFile`];
+module.exports.plugunsJsUsed = [`jquery_js`, `mmenu_js`, `glightbox_js`, `jquery_modal_js`, `myJsLibs`, `myJsFile`];
+module.exports.plugunsCssUsed = [`normalize_css`, `mmenu_css`, `glightbox_js`, `jquery_modal_css`, `myCssLibs`, `myCssFile`];
 
 module.exports.plugunsJs = new Map([
   [`jquery_js`, `node_modules/jquery/dist/jquery.min.js`],
@@ -60,7 +60,7 @@ module.exports.path = {
   made: {
     spriteFolder: `${srcFolder}/img/sprite.svg`,
     imgFolder: `${srcFolder}/img/`,
-    imgFiles: `${srcFolder}/img/**/*`,
+    // imgFiles: `${srcFolder}/img/**/*`,
     jsFolder: `${srcFolder}/js/`,
     cssFolder: `${srcFolder}/css/`,
     svgFolder: `${srcFolder}/img/svg/`,

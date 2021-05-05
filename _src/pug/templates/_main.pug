@@ -6,9 +6,11 @@ html(lang="ru")
   body.page-body
     include ../helpers/arrays
 
-    //- block link-active
-    //- if header 
-    include ../modules/_header
+    block link-active
+    if !header 
+      
+    else 
+      include ../modules/_header
 
     
 
@@ -25,9 +27,14 @@ html(lang="ru")
     if page_index
       include ../modules/_footer-index
     else 
-      //- include ../modules/_footer
-      
+      if !footer
 
+      else
+        include ../modules/_footer
+      
+    if modal_request
+      include ../modules/_modal-request
+      include ../modules/_modal-thanks
     
 
 

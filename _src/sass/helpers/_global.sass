@@ -26,6 +26,8 @@ body
   display: flex
   flex-direction: column
 
+  background-color: #000
+
 a
   text-decoration: none
 
@@ -110,6 +112,17 @@ button
   +mw(768)
     display: none
 
+.desktop-visibility
+  display: none
+
+  +mw(1000)
+    display: block
+
+.desktop-hidden
+
+  +mw(1000)
+    display: none
+
 .phone-visibility
   display: none
 
@@ -137,6 +150,9 @@ button
   flex-grow: 1
   background-color: #010101
   padding-top: 150px
+
+  +mw(768)
+    padding-top: 60px
 
 *
   outline: 1px solid tomato

@@ -28,3 +28,13 @@ mixin img-retina(name, type, alt, className, width, height)
 //- +img-svg(``, ``, ``, ``, ``, ``)
 mixin img-svg(name, className, alt, width, height)
   img(class=`${className}` src=`/img/svg/${name}.svg` alt=alt width=width height=height loading="lazy")
+
+  //- picture
+    source(media="(max-width: 600px)" srcset="/img/novelty.jpg 1x, /img/novelty@2x.jpg 2x")
+    img.card__img(src="/img/new-year.jpg" srcset="/img/new-year.jpg 1x, /img/new-year@2x.jpg 2x" loading="lazy" alt="праздник" width="680" height="260")
+
+//- +mw(1270)
+    font-size: calc(22px + 20 * (100vw / 1270))
+
+//- +mw(768)
+  font-size: calc(22px + (20 + 20 * 0.7) * ((100vw - 320px) / 1270))

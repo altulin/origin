@@ -3,9 +3,10 @@ const util = require(`./modules/util.js`).util;
 
 
 
-const defaultArray = [`getWatchers`, `browsersync`];
+// const defaultArray = [`getWatchers`, `browsersync`];
+const defaultArray = [`makeImagesSvg`, `makeImages`, `createSprite`, `getStyleFile`, `getScriptFile`, `createWebp`, `transformPug`, `htmlPrettify`, `getWatchers`, `browsersync`];
 
-const initArray = [`cleanImg`, `makeImagesSvg`, `makeImages`, `createSprite`, `getStyleFile`, `getScriptFile`, `createWebp`, `transformPug`, `htmlPrettify`];
+const initArray = [`makeImagesSvg`, `makeImages`, `createSprite`, `getStyleFile`, `getScriptFile`, `createWebp`, `transformPug`, `htmlPrettify`];
 
 const testArray = [`browsersyncTest`]
 

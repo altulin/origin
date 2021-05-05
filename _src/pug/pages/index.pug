@@ -3,19 +3,39 @@ include ../helpers/mixins.pug
 
   block link-active
     - page_index = true
+    - modal_request = true
 
 
 block content
   section.promo   
     .promo__inner.container
       .promo__left-col
-        h1.promo__title.title Ремонт любых <br><span class="title__flag"></span> немецких автомобилей с&nbsp;гарантией результата
-        p.promo__text.size-3 Мы уверены в качестве своей работы и надежности запчастей, поэтому даем Гарантию, которая позволит Вам чувствовать себе уверенным и защищенным от возможных проблем.
+        h1.promo__title.title Ремонт<br class="phone-visibility"> немецких автомобилей с&nbsp;гарантией результата
+        
+        .promo__brands-wrap
+          ul.promo__brands.brands.brands--first
+            each val in [`Mercedes - Benz`, `BMW`]
+              li.brands__item 
+                p.brands__text.size-3= val
+          
+          ul.promo__brands.brands.brands--second
+            each val in [`Audi`,`Volkswagen`]
+              li.brands__item 
+                p.brands__text.size-3= val
+
+        
+        p.promo__text.size-3.desktop-hidden Мы уверены в качестве своей работы и надежности запчастей, поэтому даем Гарантию, которая позволит Вам чувствовать себя уверенным и защищенным.
       .promo__right-col
         figure.promo__img-wrap  
-          +img-retina(`promo-bg`, `png`, `Ремонт любых немецких автомобилей`, `promo__img`, `921`, `518`)
-          a.promo__link(href="https://youtu.be/d-oTtt5cawg")
-            +img-retina(`btn`, `png`, `кнопка`, `promo__btn`, `136`, `136`)
+          picture
+            source(media="(max-width: 600px)" srcset="/img/promo-bg-600w.jpg")
+            img.promo__img(src="/img/promo-bg.jpg" srcset="/img/promo-bg.jpg 1x, /img/promo-bg@2x.jpg 2x" loading="lazy" alt="ремонт немецких автомобилей" width="996" height="714")
+          .promo__video-box.video-box
+            a.video-box__link.hover-opacity(href="https://youtu.be/d-oTtt5cawg")
+              +img-retina(`btn`, `png`, `кнопка`, `promo__btn`, `136`, `136`)
+            p.video-box__text.size-4 Посмотрите видео о нашей компании
+        p.promo__text.size-3.desktop-visibility Мы уверены в качестве своей работы и&nbsp;надежности запчастей, поэтому даем Гарантию, которая позволит Вам чувствовать себя уверенным и&nbsp;защищенным.
+
 
 
 

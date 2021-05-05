@@ -1,6 +1,7 @@
 .breadcrumbs
 
-  &__inner
+  +mw(768)
+    display: none
 
   &__list
     display: flex
@@ -17,7 +18,6 @@
         content: ""
 
     &::before
-
       width: 15px
       height: 15px
       background-image: url(/img/svg/arr.svg)
@@ -35,5 +35,3 @@
     & a
       color: #524F55
       pointer-events: none
-
-.container

@@ -1,0 +1,43 @@
+.doc
+  padding-bottom: 100px
+
+  +mw(768)
+    padding-bottom: 60px
+
+  &__content
+
+    h1
+      font-size: 42px
+      font-weight: 500
+      margin-bottom: 50px
+
+      +mw(1270)
+        font-size: calc(22px + 20 * (100vw / 1270))
+
+      +mw(768)
+        font-size: calc(22px + (20 + 20 * 0.7) * ((100vw - 320px) / 1270))
+
+      span
+        font-size: 36px
+
+        +mw(1270)
+          font-size: calc(20px + 16 * (100vw / 1270))
+
+        +mw(768)
+          font-size: calc(20px + (16 + 16 * 0.7) * ((100vw - 320px) / 1270))
+
+    p
+      color: rgba(176, 179, 198, 0.8)
+      font-size: 18px
+      font-weight: 300
+
+    h3
+      font-size: 24px
+      font-weight: 500
+      text-transform: uppercase
+      margin-bottom: 40px
+      margin-top: 100px
+
+      +mw(768)
+        margin-top: 60px
+        font-size: calc(18px + (6 + 6 * 0.7) * ((100vw - 320px) / 1270))

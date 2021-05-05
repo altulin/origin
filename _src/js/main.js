@@ -1,11 +1,16 @@
 $(function () {
+  if ($(window).width() < 768) {
+    console.log($(window).width())
+    $(`#header-nav`).css("display", "block")
+  }
 
   //mmenu
   if ($("#header-nav").length > 0) {
     const menu = new MmenuLight(
       document.querySelector("#header-nav"),
-      "(max-width: 4000px)"
+      "(max-width: 768px)"
     );
+
 
     const navigator = menu.navigation({
       title: ""
@@ -17,23 +22,48 @@ $(function () {
 
     $(`.header__link-menu--open`).on(`click`, (e) => {
       e.preventDefault();
+      $(`.header__link-menu--open`).addClass('hidden')
+      $(`.header__link-menu--close`).removeClass('hidden')
       drawer.open();
     });
 
     $(`.header__link-menu--close`).on(`click`, (e) => {
       e.preventDefault();
+      $(`.header__link-menu--open`).removeClass('hidden')
+      $(`.header__link-menu--close`).addClass('hidden')
       drawer.close();
     });
+
+    $(`.header-nav__item--top a`).on(`click`, () => {
+      $(`.header__link-menu--open`).removeClass('hidden')
+      $(`.header__link-menu--close`).addClass('hidden')
+      drawer.close();
+    })
+
+
+    // modal
+    $(`.header__link`).on(`click`, () => {
+      $(`.header__link-menu--open`).removeClass('hidden')
+      $(`.header__link-menu--close`).addClass('hidden')
+      drawer.close();
+      $('#modal-request').modal();
+    });
+
+
   }
 
 
   // lightbox
   const promo_lightbox = GLightbox({
-    selector: `.promo__link`,
+    selector: `.video-box__link`,
     autoplayVideos: true,
     touchNavigation: true,
     loop: true,
   });
+
+  // modal
+
+
 
 
   //валидация полей форм

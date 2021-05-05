@@ -1,34 +1,44 @@
 header.header   
   .header__inner.container 
     a.header__logo.logo(href="/index.html") 
-      //- +img-retina(`logo`, `png`, `логотип`, `logo__img`, `151`, `42`) 
       figure.logo__img-wrap   
-        +svg_my(`logo`, `logo__img`)
+        +svg_my(`logo`, `logo__img tablet-hidden`)
+        +img-retina(`logo`, `png`, `логотип`, `logo__img tablet-visibility`, `161`, `54`)
 
-      figure.logo__flag-wrap
+      figure.logo__flag-wrap.tablet-hidden
 
-    p.header__slogan.size-0 качественный ремонт<br> немецких автомобилей
+    p.header__slogan.size-0.tablet-hidden качественный ремонт<br> немецких автомобилей
 
     a.header__phone.phone.hover-opacity(href="tel:+491570156") 
-      +svg(`phone`, `14`, `#8D8F9E`)
+      +svg(`phone`, `16`, `#8D8F9E`)
       span.phone__text.size-1.tablet-hidden 8 800 555 55 55
 
     a.header__link-menu.header__link-menu--open.hover-opacity.tablet-visibility(href="#header-nav") 
-      +svg(`menu-open`, `20`, `#8D8F9E`)
+      +svg(`menu-open`, `20`, `#fff`)
       span.header__link-menu-text открыть меню
 
-    nav.header__nav#header-nav.tablet-visibility
-      a.header__link-menu.header__link-menu--close.hidden.hover-opacity(href="#header-nav") 
-        +svg(`modal-close`, `20`, `#4D545B`)
+    a.header__link-menu.header__link-menu--close.hidden.hover-opacity(href="#header-nav") 
+        +svg(`menu-close`, `20`, `#fff`)
         span.header__link-menu-text закрыть меню
+
+    nav.header__nav#header-nav(style="display: none")
+      
       ul.header-nav__list
         each item in header_nav
-          li.header-nav__item
-            a.header-nav__link.hover-opacity(href=`${item[1]}`) 
+          li.header-nav__item.header-nav__item--top
+            a.header-nav__link.hover-opacity.size-1(href=`${item[1]}`) 
               span.header-nav__link-text= `${item[0]}`
 
-        li.header-nav__item 
-          a.header__link.btn-1.hover-opacity(href="#modal-request" rel="modal:open") Получить консультацию
+        li.header-nav__item.header-nav__item--record 
+          p.header-nav__text Запишитесь на консультацию или позвоните нам
+        
+        li.header-nav__item.header-nav__item--phone  
+          a.header-nav__phone(href="tel:+491570156") 
+            +svg(`phone`, `16`, `#8D8F9E`)
+            span.phone__text.tablet-hidden 8 800 555 55 55
+        
+        li.header-nav__item.header-nav__item--consult 
+          a.header__link.btn-2.hover-opacity(href="#modal-request" rel="modal:open") Получить консультацию
 
 
     a.header__link.btn-1.hover-opacity.size-1.tablet-hidden(href="#modal-request" rel="modal:open") Получить консультацию

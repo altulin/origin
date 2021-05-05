@@ -1,12 +1,23 @@
-.warranty-head
+.warranty-promo
+  margin-bottom: -110px
+
+  +mw(768)
+    margin-bottom: 30px
+    margin-top: 30px
 
   &__inner
     position: relative
+    max-width: 1440px
+    margin-left: auto
+    margin-right: auto
 
   &__img-wrap
     width: 100%
-    padding-top: 38%
+    padding-top: 33%
     position: relative
+
+    +mw(768)
+      padding-top: 63%
 
   &__img
     position: absolute
@@ -15,28 +26,8 @@
     left: 0
     top: 0
 
-  &__promo
-
   &__title
     width: 325px
-
-  &__down
-
-.warranty-head-promo
-  position: absolute
-  width: 100%
-  bottom: 0
-  left: 0
-  padding-left: 15px
-  padding-right: 15px
-  display: flex
-  justify-content: space-between
-
-  &__inner
-
-.container
-
-.title
 
 .down
   width: 100px
@@ -46,6 +37,10 @@
   display: flex
   justify-content: center
   align-items: center
+
+  +mw(768)
+    width: 60px
+    height: 60px
 
   &__img-wrap
     height: 37px
@@ -65,3 +60,103 @@
 
   60%
     transform: translateY(-10px)
+
+.warranty
+  padding-bottom: 100px
+  position: relative
+  z-index: 1
+  background-image: url(/img/bg-2.png)
+  background-repeat: no-repeat
+  background-size: 70% auto
+  background-position: 100% 100%
+
+  &::after
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    background-image: url(/img/bg-1.png)
+    left: 0
+    bottom: -199px
+    background-position: 100% -25%
+    background-size: 50% auto
+    background-repeat: no-repeat
+    transform: rotate(180deg)
+    pointer-events: none
+
+    +mw(768)
+      background-position: 100% 0
+      background-size: 60% auto
+
+  +mw(768)
+    padding-bottom: 60px
+
+  &__inner
+    background-image: url(/img/bg-1.png)
+    background-repeat: no-repeat
+    background-size: 75% auto
+    background-position: 100% 15%
+
+  &__top
+    display: flex
+    justify-content: space-between
+    text-align: left
+    align-items: center
+    margin-bottom: 46px
+
+  &__content
+    max-width: 824px
+
+    ul::nth-child(1)
+      margin-bottom: 100px
+      color: red
+
+    li
+      color: rgba(#B0B3C6, 0.8)
+      font-size: 18px
+      font-weight: 300
+      display: flex
+
+      & + li
+        margin-top: 5px
+
+      span
+        min-width: 20px
+
+    p
+      color: rgba(#B0B3C6, 0.8)
+      font-size: 18px
+      font-weight: 300
+
+      & + p
+        margin-top: 20px
+
+    h3
+      font-size: 24px
+      font-weight: 500
+      text-transform: uppercase
+      margin-bottom: 40px
+      margin-top: 100px
+
+      +mw(1270)
+        font-size: calc(20px + 4 * (100vw / 1270))
+
+      +mw(768)
+        margin-top: 60px
+        font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1270))
+
+    h4
+
+      font-size: 24px
+      font-weight: 500
+      margin-top: 100px
+
+      +mw(1270)
+        font-size: calc(20px + 4 * (100vw / 1270))
+
+      +mw(768)
+        margin-top: 60px
+        font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 320px) / 1270))
+
+      & + h4
+        margin-top: 20px

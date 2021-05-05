@@ -9,7 +9,7 @@ const imagemin = pluginsPath.imagemin;
 
 module.exports.makeImages = () => {
   return src(path.project.rasterImg) // Берём все изображения из папки источника
-    .pipe(newer(path.made.imgFiles)) // Проверяем, было ли изменено (сжато) изображение ранее
+    .pipe(newer(path.made.imgFolder)) // Проверяем, было ли изменено (сжато) изображение ранее
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),
