@@ -1,8 +1,13 @@
 section#modal-thanks.modal-thanks.modal 
-  .modal-thanks__inner  
+  .modal-thanks__inner.container
     figure.modal-thanks__img-wrap 
-    h2.modal-thanks__title.text-forum Спасибо!<br> Ваша заявка отправлена
-    p.modal-thanks__text.size-4 В ближайшее время мы свяжимся с Вами и уточним все необходимые детали.
+    h2.modal-thanks__title.title Спасибо! Ваша <br>заявка принята
+    p.modal-thanks__text.size-4 В ближайшее время мы с вами свяжемся
+    .modal-thanks__picture 
+      figure.modal-thanks__img-wrap-car
+        picture
+          source(media="(max-width: 600px)" srcset="/img/thanks-bg-600w.png")
+          img.modal-thanks__img(src="/img/thanks-bg.png" srcset="/img/thanks-bg.png 1x, /img/thanks-bg@2x.png 2x" loading="lazy" alt="ремонт немецких автомобилей" width="822" height="298")
   
         
 

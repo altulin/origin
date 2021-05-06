@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint **/*.sass"
+    "test": "stylelint **/*.sass",
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",

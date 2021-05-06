@@ -1,0 +1,33 @@
+extends ../templates/_main.pug
+include ../helpers/mixins.pug
+
+  block link-active
+    - modal_request = true
+
+
+block content
+  include ../modules/_breadcrumbs.pug
+
+  section.services
+    .services__inner.container 
+      h1.services__title.title Услуги
+
+      ul.services__list
+        while n < 5
+          -n++
+          li.services__item   
+            a.services__link(href="/turn.html")
+              .services__picture
+                figure.services__img-wrap 
+                  +img-retina(`promotions-1`, `jpg`, `акции`, `services__img`, `600`, `300`)
+              .services__content 
+                .services__info
+                  p Диагностика и ремонт электрооборудования
+                  small включает в себя 10 услуг
+                
+                .services__down.down
+                  figure.down__img-wrap
+        -n=0
+
+
+  

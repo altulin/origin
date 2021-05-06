@@ -1,0 +1,23 @@
+extends ../templates/_main.pug
+include ../helpers/mixins.pug
+
+  block link-active
+    - modal_request = true
+    - modal_promotions = true
+
+
+block content
+  include ../modules/_breadcrumbs.pug
+  section.promotions
+    .promotions__inner.container 
+      h1.promotions__title.title Акции
+
+      ul.promotions__list 
+        while n < 8
+          -n++
+          li.promotions__item 
+            a.promotions__link(href="#modal-promotions" rel="modal:open")
+              figure.promotions__img-wrap   
+                +img-retina((n % 2 === 0?`promotions-2`:`promotions-1`), `jpg`, `акции`, `promotions__img`, `600`, `300`)
+              p.promotions__text Замена жидкости в АКПП бесплатно!
+        -n = 0

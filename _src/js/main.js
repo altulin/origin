@@ -67,9 +67,10 @@ $(function () {
 
 
   //валидация полей форм
-  // $(`.modal-request__form`).on(`submit`, (e) => {
-  //   checkValidation(e);
-  // });
+  $(`.modal-request__form`).on(`submit`, (e) => {
+    e.preventDefault();
+    sendForm(e);
+  });
 
 
   // const checkValidation = (e) => {
@@ -92,26 +93,26 @@ $(function () {
 
 
   // отправка форм
-  // const sendForm = (e) => {
-  //   const form = e.target;
-  //   const data = $(form).serialize();
-  //   $.ajax({
-  //     url: 'https://httpbin.org/anything',
-  //     method: 'post',
-  //     dataType: 'json',
-  //     data: data,
-  //     success: function () {
-  //       successHandler(e)
-  //     }
-  //   });
-  // };
+  const sendForm = (e) => {
+    const form = e.target;
+    const data = $(form).serialize();
+    $.ajax({
+      url: 'https://httpbin.org/anything',
+      method: 'post',
+      dataType: 'json',
+      data: data,
+      success: function () {
+        successHandler(e)
+      }
+    });
+  };
 
 
   // после отправки открываем страницу
-  // const successHandler = (e) => {
-  //   e.target.reset();
-  //   $('#modal-thanks').modal();
-  // }
+  const successHandler = (e) => {
+    e.target.reset();
+    $('#modal-thanks').modal();
+  }
 
 
   //сброс ошибки
@@ -122,7 +123,7 @@ $(function () {
   // };
 
   // mask input tel
-  // $(`#phone`).inputmask({ "mask": "+7 (999) 999-99-99" });
+  $(`#phone`).inputmask("+7 (999) 999-99-99", { "placeholder": "_" });
 
 
   // // confidence slider

@@ -2,7 +2,7 @@ const projectName = `original` // название проекта
 const distFolder = `${projectName}_dist`; //Папка продакшн
 const srcFolder = `_src`;  // Папка разработки
 
-module.exports.plugunsJsUsed = [`jquery_js`, `mmenu_js`, `glightbox_js`, `jquery_modal_js`, `myJsLibs`, `myJsFile`];
+module.exports.plugunsJsUsed = [`jquery_js`, `mmenu_js`, `glightbox_js`, `jquery_modal_js`, `inputmask_js`, `myJsLibs`, `myJsFile`];
 module.exports.plugunsCssUsed = [`normalize_css`, `mmenu_css`, `glightbox_js`, `jquery_modal_css`, `myCssLibs`, `myCssFile`];
 
 module.exports.plugunsJs = new Map([

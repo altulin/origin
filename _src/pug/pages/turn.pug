@@ -1,0 +1,35 @@
+extends ../templates/_main.pug
+include ../helpers/mixins.pug
+
+  block link-active
+    - modal_request = true
+
+
+block content
+  include ../modules/_breadcrumbs.pug
+
+  section.turn-promo  
+    figure.turn-promo__img-wrap   
+      picture
+        source(media="(max-width: 768px)" srcset="/img/turn-promo-600w.png")
+        img.turn-promo__img(src="/img/turn-promo.png" srcset="/img/turn-promo.png 1x, /img/turn-promo@2x.png 2x" loading="lazy" alt="праздник" width="1440" height="479")
+
+  section.turn-content 
+    .turn-content__inner.container  
+      .turn-content__top 
+        h1.turn-content__title.title Диагностика и ремонт электрооборудования
+
+        .turn-content__down.down
+          figure.down__img-wrap
+
+      .turn-content__description.turn-content__description--shadow
+        p Электронная система современных машин устроена весьма сложно и предназначена для выполнения большого спектра функциональности для работы автомобиля, в частности благодаря ей, осуществляется пуск двигателя, возможна работа осветительного оборудования и функционирования многих приборов.
+        p Ключевыми составляющими электрической системы машины являются: аккумуляторная батарея (АКБ), система зажигания, стартер и генератор, система впрыска, система освещения, печка и кондиционер, система управления автомобилем.
+
+      a.turn-content__link.size-4.hover-opacity(href="#") Прочитать еще
+
+
+
+
+
+  

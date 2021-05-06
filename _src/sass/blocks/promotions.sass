@@ -1,0 +1,118 @@
+.promotions
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background-image: url(/img/promotions-bg-1.png), url(/img/promotions-bg-2.png), url(/img/promotions-bg-3.png)
+    background-repeat: no-repeat
+    background-size: 100% 100%
+
+  &__inner
+
+  &__title
+    margin-bottom: 60px
+    margin-top: 10px
+
+  &__list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__item
+    width: calc(50% - 20px)
+    margin-bottom: 100px
+
+    +mw(600)
+      width: 100%
+      margin-bottom: 60px
+
+  &__link
+    display: block
+    position: relative
+
+    &::before
+      content: ""
+      position: absolute
+      width: 75%
+      height: 75%
+      background-color: rgba(196, 2, 47, 0.3)
+      bottom: 30px
+      filter: blur(100px)
+      border-radius: 20px
+      transition: 0.2s
+      opacity: 0
+
+    &:hover
+
+      &::before
+        opacity: 1
+
+      & .promotions__text::before
+        opacity: 1
+
+      & .promotions__text::after
+        opacity: 1
+
+      & .promotions__img-wrap
+        border-radius: 20px 20px 0 0
+
+  &__img-wrap
+    width: 100%
+    padding-top: 50%
+    position: relative
+    border-radius: 20px 20px 10px 10px
+    overflow: hidden
+
+  &__img
+    position: absolute
+    min-width: 101%
+    height: 100%
+    left: 50%
+    transform: translateX(-50%)
+    top: 0
+
+  &__text
+    font-weight: 500
+    font-size: 24px
+    padding-top: 24px
+    color: #FCFCFD
+    position: relative
+
+    +mw(768)
+      font-size: calc(18px + (6 + 6 * 0.7) * ((100vw - 320px) / 1270))
+
+    +mw(600)
+      text-align: center
+
+    &::after
+      content: ""
+      position: absolute
+      width: 100%
+      height: 5px
+      background-color: #BD0022
+      top: 0
+      left: 0
+      opacity: 0
+      transition: 0.2s
+
+    &::before
+      content: ""
+      position: absolute
+      width: 37px
+      height: 7px
+      background-image: url(/img/svg/arr-red.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      right: 0
+      bottom: 10px
+      opacity: 0
+      transition: 0.2s
+
+.container
+
+.title
