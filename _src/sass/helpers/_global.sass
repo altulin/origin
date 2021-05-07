@@ -154,5 +154,37 @@ button
   +mw(768)
     padding-top: 60px
 
+  &--turn
+    position: relative
+
+    &::before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background-image: url(/img/turn-1.png)
+      background-repeat: no-repeat
+      background-size: 80% auto
+      background-position: 100% 50%
+      z-index: 1
+      pointer-events: none
+
+  &--contacts
+    position: relative
+
+    &::before
+      content: ""
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background-image: url(/img/contacts-1.png) , url(/img/contacts-2.png)
+      background-repeat: no-repeat
+      background-position: 0 100%, 100% 0
+      pointer-events: none
+
 *
   // outline: 1px solid tomato

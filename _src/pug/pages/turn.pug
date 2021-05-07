@@ -3,20 +3,22 @@ include ../helpers/mixins.pug
 
   block link-active
     - modal_request = true
+    - turn = true
+
 
 
 block content
   include ../modules/_breadcrumbs.pug
 
-  section.turn-promo  
-    figure.turn-promo__img-wrap   
+  section.turn-promo
+    figure.turn-promo__img-wrap
       picture
         source(media="(max-width: 768px)" srcset="/img/turn-promo-600w.png")
         img.turn-promo__img(src="/img/turn-promo.png" srcset="/img/turn-promo.png 1x, /img/turn-promo@2x.png 2x" loading="lazy" alt="праздник" width="1440" height="479")
 
-  section.turn-content 
-    .turn-content__inner.container  
-      .turn-content__top 
+  section.turn-content
+    .turn-content__inner.container
+      .turn-content__top
         h1.turn-content__title.title Диагностика и&nbsp;ремонт электрооборудования
 
         .turn-content__down.down
@@ -27,72 +29,79 @@ block content
         p Ключевыми составляющими электрической системы машины являются: аккумуляторная батарея (АКБ), система зажигания, стартер и генератор, система впрыска, система освещения, печка и кондиционер, система управления автомобилем.
 
       a.turn-content__link.size-4.hover-opacity(href="#") Прочитать еще
-  
+
   section.turn-services
-    .turn-services__inner.container   
+    .turn-services__inner.container
       .turn-services__left
         h2.turn-services__title Услуги
-        ul.turn-services__list 
+        ul.turn-services__list
           each item in turn_services
-            li.turn-services__item 
+            li.turn-services__item
               p= item[0]
               span=  `от ${item[1]} р.`
 
         p.turn-services__text.size-1 Обращаем внимание на то, что вышеописанные цены на услуги не включают в себя цену запчастей. Итоговая стоимость обслуживания авто может варьироваться в зависимости от пробега, года выпуска, марки и модели,   а&nbsp;также условий эксплуатации.
 
       .turn-services__right.other
-        ul.other__list 
-          li.other__item.other__item--head 
+        ul.other__list
+          li.other__item.other__item--head
             a.other__link.other__link--head(href="#") Другие услуги:
-          each item,i in other 
-            li.other__item 
+          each item,i in other
+            li.other__item
               a.other__link(href="#" class=(i === 0?`other__link--active`:``))= item
 
-  section.turn-record 
-    .turn-record__inner.container 
-      .turn-record__col.record 
+  section.turn-record
+    .turn-record__inner.container
+      .turn-record__col.record
         .record__col-left.car
-          a.car__logo.logo 
-            figure.logo__img-wrap   
+          a.car__logo.logo
+            figure.logo__img-wrap
               +svg_my(`logo`, `logo__img tablet-hidden`)
               +img-retina(`logo`, `png`, `логотип`, `logo__img tablet-visibility`, `161`, `54`)
             figure.logo__flag-wrap.tablet-hidden
 
-          figure.car__img-wrap 
+          figure.car__img-wrap
             +img-retina(`record-car`, `png`, `ремонт авто`, `car__img`, `409`, `238`)
-        
+
         .record__col-right.connect
           .connect__title Хотите записатсься или не нашли необходимой услуги?
           .connect__text.size-4 Позвоните нам или оставьте заявку на консультацию.
-          .connect__box   
+          .connect__box
             a.connect__link.btn-2.hover-opacity(href="#modal-request" rel="modal:open") Получить консультацию
 
-            a.connect__phone.phone.hover-opacity(href="tel:+491570156") 
+            a.connect__phone.phone.hover-opacity(href="tel:+491570156")
               +svg(`phone`, `16`, `#8D8F9E`)
               span.phone__text.size-1.tablet-hidden 8 800 555 55 55
 
-  
-  section.turn-faq 
-    .turn-faq__inner.container 
-      .turn-faq__col.faq 
+
+  section.turn-faq
+    .turn-faq__inner.container
+      .turn-faq__col.faq
         h2.faq__title Популярные вопросы
 
         while n < 4
           -n++
           .faq__group(data-accordion-group)
             .faq__accordion(data-accordion)
-              button.faq__btn(type="button" data-control) Какие рекомендации стоит учитывать при подборе АКБ?
+              button.faq__btn.hover-opacity(type="button" data-control) Какие рекомендации стоит учитывать при подборе АКБ?
                 span.faq__circle
               .faq__content(data-content)
                 p Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет 55-60 Ач, а пусковой ток в районах с холодным климатом должен быть более 600 А.
 
         -n = 0
 
+  section.turn-contacts
+    .turn-contacts__inner.container
+      .turn-contacts__col
+        .turn-contacts__top
+          h2.turn-contacts__title Контакты
+          .turn-contacts__box
+            p.turn-contacts__text Запишитесь на консультацию или позвоноите нам
+            a.turn-contacts__link.btn-2.hover-opacity(href="#modal-request" rel="modal:open") Получить консультацию
+            a.turn-contacts__fone.connect__phone.phone.hover-opacity(href="tel:+491570156")
+              +svg(`phone`, `16`, `#8D8F9E`)
+              span.phone__text.size-1.tablet-hidden 8 800 555 55 55
 
 
-
-
-
-
-
-  
+        .turn-contacts__map
+          <iframe src="https://snazzymaps.com/embed/311338" width="100%" height="600px" style="border:none;"></iframe>

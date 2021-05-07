@@ -62,7 +62,7 @@ module.exports.path = {
   made: {
     spriteFolder: `${srcFolder}/img/sprite.svg`,
     imgFolder: `${srcFolder}/img/`,
-    // imgFiles: `${srcFolder}/img/**/*`,
+    imgFiles: `${srcFolder}/img/**/*`,
     jsFolder: `${srcFolder}/js/`,
     cssFolder: `${srcFolder}/css/`,
     svgFolder: `${srcFolder}/img/svg/`,

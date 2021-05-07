@@ -25,7 +25,7 @@
 </head>
 
 <body class="page-body">
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__inner container">
       <a class="header__logo logo" href="/index.html">
         <figure class="logo__img-wrap">
@@ -37,57 +37,41 @@
         <figure class="logo__flag-wrap tablet-hidden"></figure>
       </a>
       <p class="header__slogan size-0 tablet-hidden">качественный ремонт
-        <br>немецких автомобилей</p>
-      <a class="header__phone phone hover-opacity" href="tel:+491570156"> <span class="icon" aria-hidden="true">
+        <br>немецких автомобилей</p><a class="header__phone phone hover-opacity" href="tel:+491570156"><span class="icon" aria-hidden="true">
             <svg viewBox="0 0 16 16" width="16" height="16" fill="#8D8F9E">
               <use xlink:href="/img/sprite.svg#phone"></use>
-            </svg></span><span class="phone__text size-1 tablet-hidden">8 800 555 55 55</span>
-      </a>
-      <a class="header__link-menu header__link-menu--open hover-opacity tablet-visibility" href="#header-nav"> <span class="icon" aria-hidden="true">
+            </svg></span><span class="phone__text size-1 tablet-hidden">8 800 555 55 55</span></a><a class="header__link-menu header__link-menu--open hover-opacity tablet-visibility" href="#header-nav"><span class="icon" aria-hidden="true">
             <svg viewBox="0 0 20 20" width="20" height="20" fill="#fff">
               <use xlink:href="/img/sprite.svg#menu-open"></use>
-            </svg></span><span class="header__link-menu-text">открыть меню</span>
-      </a>
-      <a class="header__link-menu header__link-menu--close hidden hover-opacity" href="#header-nav"> <span class="icon" aria-hidden="true">
+            </svg></span><span class="header__link-menu-text">открыть меню</span></a><a class="header__link-menu header__link-menu--close hidden hover-opacity" href="#header-nav"><span class="icon" aria-hidden="true">
             <svg viewBox="0 0 20 20" width="20" height="20" fill="#fff">
               <use xlink:href="/img/sprite.svg#menu-close"></use>
-            </svg></span><span class="header__link-menu-text">закрыть меню</span>
-      </a>
+            </svg></span><span class="header__link-menu-text">закрыть меню</span></a>
       <nav class="header__nav" id="header-nav" style="display: none">
         <ul class="header-nav__list">
-          <li class="header-nav__item header-nav__item--top">
-            <a class="header-nav__link hover-opacity size-1" href="/services.html"> <span class="header-nav__link-text">услуги</span>
-            </a>
+          <li class="header-nav__item header-nav__item--top"><a class="header-nav__link hover-opacity size-1" href="/services.html"><span class="header-nav__link-text">услуги</span></a>
           </li>
-          <li class="header-nav__item header-nav__item--top">
-            <a class="header-nav__link hover-opacity size-1" href="/promotions.html"> <span class="header-nav__link-text">акции</span>
-            </a>
+          <li class="header-nav__item header-nav__item--top"><a class="header-nav__link hover-opacity size-1" href="/promotions.html"><span class="header-nav__link-text">акции</span></a>
           </li>
-          <li class="header-nav__item header-nav__item--top">
-            <a class="header-nav__link hover-opacity size-1" href="/warranty.html"> <span class="header-nav__link-text">гарантии</span>
-            </a>
+          <li class="header-nav__item header-nav__item--top"><a class="header-nav__link hover-opacity size-1" href="/warranty.html"><span class="header-nav__link-text">гарантии</span></a>
           </li>
-          <li class="header-nav__item header-nav__item--top">
-            <a class="header-nav__link hover-opacity size-1" href="/contacts.html"> <span class="header-nav__link-text">контакты</span>
-            </a>
+          <li class="header-nav__item header-nav__item--top"><a class="header-nav__link hover-opacity size-1" href="/contacts.html"><span class="header-nav__link-text">контакты</span></a>
           </li>
           <li class="header-nav__item header-nav__item--record">
             <p class="header-nav__text">Запишитесь на консультацию или позвоните нам</p>
           </li>
-          <li class="header-nav__item header-nav__item--phone">
-            <a class="header-nav__phone" href="tel:+491570156"> <span class="icon" aria-hidden="true">
+          <li class="header-nav__item header-nav__item--phone"><a class="header-nav__phone" href="tel:+491570156"><span class="icon" aria-hidden="true">
                   <svg viewBox="0 0 16 16" width="16" height="16" fill="#8D8F9E">
                     <use xlink:href="/img/sprite.svg#phone"></use>
-                  </svg></span><span class="phone__text tablet-hidden">8 800 555 55 55</span>
-            </a>
+                  </svg></span><span class="phone__text tablet-hidden">8 800 555 55 55</span></a>
           </li>
-          <li class="header-nav__item header-nav__item--consult"> <a class="header__link btn-2 hover-opacity" href="#modal-request" rel="modal:open">Получить консультацию</a>
+          <li class="header-nav__item header-nav__item--consult"><a class="header__link btn-2 hover-opacity" href="#modal-request" rel="modal:open">Получить консультацию</a>
           </li>
         </ul>
       </nav><a class="header__link btn-1 hover-opacity size-1 tablet-hidden" href="#modal-request" rel="modal:open">Получить консультацию</a>
     </div>
   </header>
-  <main class="page-main">
+  <main class="page-main page-main--turn">
     <section class="breadcrumbs">
       <div class="breadcrumbs__inner container">
         <ul class="breadcrumbs__list">
@@ -160,21 +144,21 @@
         </div>
         <div class="turn-services__right other">
           <ul class="other__list">
-            <li class="other__item other__item--head"> <a class="other__link other__link--head" href="#">Другие услуги:</a>
+            <li class="other__item other__item--head"><a class="other__link other__link--head" href="#">Другие услуги:</a>
             </li>
-            <li class="other__item"> <a class="other__link other__link--active" href="#">Диагностика и ремонт электрооборудования</a>
+            <li class="other__item"><a class="other__link other__link--active" href="#">Диагностика и ремонт электрооборудования</a>
             </li>
-            <li class="other__item"> <a class="other__link" href="#">Замена масла</a>
+            <li class="other__item"><a class="other__link" href="#">Замена масла</a>
             </li>
-            <li class="other__item"> <a class="other__link" href="#">Ремонт и диагностика двигателя</a>
+            <li class="other__item"><a class="other__link" href="#">Ремонт и диагностика двигателя</a>
             </li>
-            <li class="other__item"> <a class="other__link" href="#">Замена и ремонт элементов трансмиссии</a>
+            <li class="other__item"><a class="other__link" href="#">Замена и ремонт элементов трансмиссии</a>
             </li>
-            <li class="other__item"> <a class="other__link" href="#">Замена ремня (цепи) ГРМ</a>
+            <li class="other__item"><a class="other__link" href="#">Замена ремня (цепи) ГРМ</a>
             </li>
-            <li class="other__item"> <a class="other__link" href="#">Обслуживание тормозной системы</a>
+            <li class="other__item"><a class="other__link" href="#">Обслуживание тормозной системы</a>
             </li>
-            <li class="other__item"> <a class="other__link" href="#">Установка предпусковых подогревателей</a>
+            <li class="other__item"><a class="other__link" href="#">Установка предпусковых подогревателей</a>
             </li>
           </ul>
         </div>
@@ -200,12 +184,10 @@
           <div class="record__col-right connect">
             <div class="connect__title">Хотите записатсься или не нашли необходимой услуги?</div>
             <div class="connect__text size-4">Позвоните нам или оставьте заявку на консультацию.</div>
-            <div class="connect__box"> <a class="connect__link btn-2 hover-opacity" href="#modal-request" rel="modal:open">Получить консультацию</a>
-              <a class="connect__phone phone hover-opacity" href="tel:+491570156"> <span class="icon" aria-hidden="true">
+            <div class="connect__box"><a class="connect__link btn-2 hover-opacity" href="#modal-request" rel="modal:open">Получить консультацию</a><a class="connect__phone phone hover-opacity" href="tel:+491570156"><span class="icon" aria-hidden="true">
                     <svg viewBox="0 0 16 16" width="16" height="16" fill="#8D8F9E">
                       <use xlink:href="/img/sprite.svg#phone"></use>
-                    </svg></span><span class="phone__text size-1 tablet-hidden">8 800 555 55 55</span>
-              </a>
+                    </svg></span><span class="phone__text size-1 tablet-hidden">8 800 555 55 55</span></a>
             </div>
           </div>
         </div>
@@ -217,7 +199,7 @@
           <h2 class="faq__title">Популярные вопросы</h2>
           <div class="faq__group" data-accordion-group>
             <div class="faq__accordion" data-accordion>
-              <button class="faq__btn" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
+              <button class="faq__btn hover-opacity" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
               </button>
               <div class="faq__content" data-content>
                 <p>Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет
@@ -227,7 +209,7 @@
           </div>
           <div class="faq__group" data-accordion-group>
             <div class="faq__accordion" data-accordion>
-              <button class="faq__btn" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
+              <button class="faq__btn hover-opacity" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
               </button>
               <div class="faq__content" data-content>
                 <p>Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет
@@ -237,7 +219,7 @@
           </div>
           <div class="faq__group" data-accordion-group>
             <div class="faq__accordion" data-accordion>
-              <button class="faq__btn" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
+              <button class="faq__btn hover-opacity" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
               </button>
               <div class="faq__content" data-content>
                 <p>Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет
@@ -247,13 +229,33 @@
           </div>
           <div class="faq__group" data-accordion-group>
             <div class="faq__accordion" data-accordion>
-              <button class="faq__btn" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
+              <button class="faq__btn hover-opacity" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
               </button>
               <div class="faq__content" data-content>
                 <p>Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет
                   55-60 Ач, а пусковой ток в районах с холодным климатом должен быть более 600 А.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="turn-contacts">
+      <div class="turn-contacts__inner container">
+        <div class="turn-contacts__col">
+          <div class="turn-contacts__top">
+            <h2 class="turn-contacts__title">Контакты</h2>
+            <div class="turn-contacts__box">
+              <p class="turn-contacts__text">Запишитесь на консультацию или позвоноите нам</p><a class="turn-contacts__link btn-2 hover-opacity" href="#modal-request" rel="modal:open">Получить консультацию</a>
+              <a class="turn-contacts__fone connect__phone phone hover-opacity" href="tel:+491570156"><span class="icon" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" width="16" height="16" fill="#8D8F9E">
+                      <use xlink:href="/img/sprite.svg#phone"></use>
+                    </svg></span><span class="phone__text size-1 tablet-hidden">8 800 555 55 55</span>
+              </a>
+            </div>
+          </div>
+          <div class="turn-contacts__map">
+            <iframe src="https://snazzymaps.com/embed/311338" width="100%" height="600px" style="border:none;"></iframe>
           </div>
         </div>
       </div>

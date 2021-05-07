@@ -7,31 +7,31 @@ html(lang="ru")
     include ../helpers/arrays
 
     block link-active
-    if !header 
-      
-    else 
+    if !header
+
+    else
       include ../modules/_header
 
-    
+
 
     block link-active
     if page_index
       main.page-main-index
         block content
-    else 
-      main.page-main
+    else
+      main.page-main(class=(turn == true?`page-main--turn`:``) class=(contacts == true?`page-main--contacts`:``))
         block content
 
-    
+
     block link-active
     if page_index
       include ../modules/_footer-index
-    else 
+    else
       if !footer
 
       else
         include ../modules/_footer
-      
+
     if modal_request
       include ../modules/_modal-request
       include ../modules/_modal-thanks
@@ -39,12 +39,10 @@ html(lang="ru")
     if modal_promotions
 
       include ../modules/_modal-promotions
-    
+
 
 
       //- include ../modules/_modal-request
       //- include ../modules/_modal-thanks
       //- include ../modules/_modal-case
     include ../modules/_scripts
-
-    
