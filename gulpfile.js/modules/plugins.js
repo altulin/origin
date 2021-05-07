@@ -16,5 +16,8 @@ module.exports.plaginsObject = {
   rename: require("gulp-rename"),
   pug: require('gulp-pug'),
   prettify: require('gulp-html-prettify'),
-  webp: require('gulp-webp')
+  webp: require('gulp-webp'),
+  gcmq: require(`gulp-group-css-media-queries`),
+  cleancss: require(`gulp-clean-css`)
+
 }

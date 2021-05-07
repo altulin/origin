@@ -48,10 +48,12 @@ module.exports.path = {
   project: {
     spriteFiles: `${srcFolder}/_img/sprite/*.svg`,
     spriteFolder: `${srcFolder}/_img/sprite/`,
+    spriteFile: `sprite.svg`,
     jsFile: `script.js`,
     jsMinFile: `script.min.js`,
     jsFiles: `${srcFolder}/js/**/*.js`,
     cssFile: `style.css`,
+    cssMinFile: `style.min.css`,
     rasterImg: `${srcFolder}/_img/*.{png,jpg}`,
     vectorImg: `${srcFolder}/_img/svg/*.svg`,
     webpImg: `${srcFolder}/_img/webp/*.{png,jpg}`,
@@ -86,6 +88,6 @@ module.exports.pathList = new Map([
   [`getCopying`, `copying`],
   [`createWebp`, `images-webp`],
   [`transformPug`, `pug`],
-  [`htmlPrettify`, `prettify`],
-  [`getWatchers`, `watch`]
+  [`getWatchers`, `watch`],
+  [`groupMedia`, `media`]
 ]);

@@ -42,6 +42,6 @@ module.exports.createSprite = () => {
       inlineSvg: true
     }))
 
-    .pipe(rename("sprite.svg"))
+    .pipe(rename(path.project.spriteFile))
     .pipe(dest(path.made.imgFolder))
 };

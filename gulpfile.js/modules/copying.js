@@ -8,7 +8,7 @@ const dist = path.dist
 module.exports.getCopying = () => {
   return src([ // Выбираем нужные файлы
     dist.cssFile,
-    // dist.cssMinFile, // стили мин если надо
+    dist.cssMinFile, // стили мин если надо
     dist.fontsFiles,
     dist.jsFile,
     dist.jsMinFile, // скрипты мин если надо
