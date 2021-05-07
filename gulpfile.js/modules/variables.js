@@ -13,6 +13,7 @@ module.exports.plugunsJs = new Map([
   [`slick_js`, `node_modules/slick-carousel/slick/slick.min.js`],
   [`inputmask_js`, `node_modules/inputmask/dist/jquery.inputmask.min.js`],
   [`jquery_formstyler_js`, `node_modules/jquery-form-styler/dist/jquery.formstyler.min.js`],
+  [`responsive-tabs_js`, `node_modules/responsive-tabs/js/jquery.responsiveTabs.min.js`],
   [`myJsFile`, `${srcFolder}/js/main.js`], // мой файл js
   [`myJsLibs`, `${srcFolder}/js/libs/**/*.js`] // мои библиотеки js
 ]);
@@ -26,6 +27,7 @@ module.exports.plugunsCss = new Map([
   [`jquery_formstyler_css`, `node_modules/jquery-form-styler/dist/jquery.formstyler.css`],
   [`jquery_formstyler_theme_css`, `node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css`],
   [`slick_css`, `node_modules/slick-carousel/slick/slick.css`],
+  [`responsive-tabs_css`, `node_modules/responsive-tabs/css/responsive-tabs.css`],
   [`myCssFile`, `${srcFolder}/sass/style.sass`], // мой файл css
   [`myCssLibs`, `${srcFolder}/css/libs/**/*.css`] // мои библиотеки css
 ]);

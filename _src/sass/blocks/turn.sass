@@ -5,6 +5,9 @@
   margin-top: 50px
   margin-bottom: -100px
 
+  +mw(600)
+    margin-bottom: 0
+
   &__img-wrap
     width: 100%
     position: relative
@@ -22,6 +25,7 @@
 .turn-content
   position: relative
   z-index: 1
+  margin-bottom: 100px
 
   &__inner
 
@@ -36,6 +40,9 @@
   &__title
     max-width: 464px
 
+    +mw(600)
+      font-size: 20px
+
   &__down
 
     .down__img-wrap
@@ -43,9 +50,13 @@
 
   &__description
     margin-bottom: 23px
+    max-height: none
+    transition: 0.3s
 
     &--shadow
       position: relative
+      max-height: 70px
+      overflow: hidden
 
       &::before
         content: ""
@@ -53,6 +64,7 @@
         width: 100%
         height: 80%
         bottom: 0
+        transition: 0.3s
         background-image: linear-gradient(180deg, rgba(1, 1, 1, 0) 0%, #010101 100%)
 
     & p
@@ -77,13 +89,386 @@
       background-size: contain
       top: 10px
       right: 0
+      transform: rotate(90deg)
+
+    &--shadow
+
+      &::after
+        transform: rotate(270deg)
+
+.turn-services
+  margin-bottom: 100px
+
+  &__inner
+    display: flex
+    justify-content: space-between
+
+    +mw(768)
+      flex-direction: column
+
+  &__left
+    max-width: 777px
+
+    +mw(768)
+      margin-bottom: 30px
+
+  &__title
+    font-weight: 500
+    font-size: 24px
+    margin-bottom: 20px
+
+    +mw(600)
+      font-size: 20px
+
+  &__list
+    margin-bottom: 20px
+
+  &__item
+    padding-top: 20px
+    padding-bottom: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid rgba(#8D8F9F, 0.2)
+
+    p
+      font-size: 18px
+      color: rgba(#B0B3C6,0.8)
+      font-weight: 400
+
+      +mw(600)
+        font-size: 16px
+
+    span
+      font-size: 18px
+      font-weight: 400
+
+      +mw(600)
+        font-size: 16px
+        flex-shrink: 0
+        margin-left: 10px
+
+  &__text
+    font-weight: 300
+    color: rgba(#B0B3C6,0.8)
+
+  &__right
+    max-width: 315px
+    flex-shrink: 0
+    margin-left: 20px
+
+    +mw(768)
+      max-width: none
+      margin-left: 0
+
+.other
+
+  &__list
+    background-color: rgba(2, 2, 2, 0.2)
+    border: 1px solid #2E2933
+    border-radius: 10px
+    backdrop-filter: blur(4px)
+
+    +mw(768)
+      max-height: 80px
+      overflow: hidden
+      transition: 0.3s
+
+      &--show
+        max-height: none
+
+  &__item
+
+    & + li
+      border-top: 1px solid #2E2933
+
+  &__item--active
+
+  &__item--head
+
+  &__link
+    color: #8E909F
+    display: block
+    min-height: 80px
+    display: flex
+    align-items: center
+    padding-left: 30px
+    padding-right: 30px
+    transition: 0.2s
+
+    &:hover
+      color: #FCFCFD
+
+  &__link--active
+    color: #FCFCFD
+    position: relative
+
+    &::after
+      content: ""
+      position: absolute
+      height: 100%
+      width: 2px
+      background-color: #BD0022
+      left: 0
+      top: 0
+
+  &__link--head
+    font-weight: 500
+    font-size: 24px
+    color: #FCFCFD
+
+    +mw(768)
+      position: relative
+      justify-content: space-between
+      font-size: 20px
+
+      &::after
+        content: ""
+        background-image: url(/img/svg/arr-white-tiny.svg)
+        width: 6px
+        height: 10px
+        background-size: contain
+        transform: rotate(90deg)
+
+.other__list--show .other__link--head::after
+  transform: rotate(270deg)
+
+.turn-record
+  margin-bottom: 100px
+
+  &__inner
+
+  &__col
 
 .container
 
-.title
+.record
+  display: flex
+  max-width: 777px
 
-.down
+  +mw(768)
+    flex-direction: column
+
+  &__col-left
+    max-width: 358px
+    width: 100%
+
+  &__col-right
+
+.car
+  display: flex
+  flex-direction: column
+
+  +mw(768)
+    margin-bottom: 30px
+    align-self: center
+
+  &__logo
+    display: block
+    align-self: center
+    z-index: 1
+
+  &__img-wrap
+    width: 100%
+    padding-top: 58%
+    position: relative
+
+  &__img
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+
+.logo
 
   &__img-wrap
 
+  &__img
+
+  &__flag-wrap
+
+.tablet-hidden
+
+.tablet-visibility
+
+.connect
+
+  &__title
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 20px
+
+    +mw(768)
+      font-size: 20px
+      text-align: center
+
+  &__text
+    margin-bottom: 30px
+    color: #8D8F9F
+
+    +mw(768)
+      text-align: center
+
+  &__box
+    display: flex
+    align-items: center
+
+    +mw(768)
+      flex-direction: column
+
+  &__link
+    padding: 20px
+    margin-right: 20px
+    text-transform: uppercase
+    display: block
+
+    +mw(768)
+      margin-bottom: 30px
+      width: 100%
+      margin-right: 0
+
+  &__phone
+    display: flex
+    align-items: center
+
+    +mw(768)
+      width: auto
+      height: auto
+      border-left: none
+
+    & .phone__text
+      color: #FCFCFD
+
+      +mw(768)
+        display: block
+
+    & .icon
+      transform: translateY(3px)
+
+      +mw(768)
+        transform: none
+        padding-top: 0
+
+      & svg
+        stroke: #FCFCFD
+
 .size-4
+
+.btn-2
+
+.hover-opacity
+
+.phone
+
+  &__text
+
+.icon
+
+.size-1
+
+.turn-faq
+  margin-bottom: 100px
+
+  &__inner
+
+  &__col
+
+.container
+
+.faq
+  max-width: 777px
+
+  &__title
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 40px
+
+    +mw(768)
+      font-size: 20px
+      margin-bottom: 40px
+
+  &__group
+
+    & + .faq__group
+
+      .faq__btn
+        border-top: 1px solid #8D8F9F
+
+    &:last-child
+
+      .faq__btn
+        border-bottom: 1px solid #8D8F9F
+
+  &__accordion
+
+  &__btn
+    width: 100%
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 0
+    padding-right: 0
+    text-align: left
+    background-color: transparent
+    color: rgba($white, 0.8)
+    font-size: 18px
+    font-weight: 400
+    display: flex
+    justify-content: space-between
+    align-items: center
+    // border-color: #8D8F9F
+    border: none
+
+  &__circle
+    display: block
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    border: 1px solid #1D1D21
+    backdrop-filter: blur(4px)
+    position: relative
+    flex-shrink: 0
+    margin-left: 10px
+
+    &::after
+      content: ""
+      position: absolute
+      width: 10px
+      height: 1px
+      background-color: #fff
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+    &::before
+      content: ""
+      position: absolute
+      width: 1px
+      height: 10px
+      background-color: #fff
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  &__content
+
+    p
+      font-size: 18px
+      font-weight: 300
+      color: rgba(#B0B3C6,0.8)
+      line-height: 28px
+      padding: 0
+      padding-bottom: 20px
+      max-width: 695px
+      border: none
+
+.open
+
+  & .faq__btn
+    border: none
+
+  & .faq__circle
+    border: 1px solid #BD0022
+
+  &::before
+    // content: none

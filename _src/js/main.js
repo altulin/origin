@@ -73,23 +73,7 @@ $(function () {
   });
 
 
-  // const checkValidation = (e) => {
-  //   let flag = false;
-  //   e.preventDefault();
-  //   $(e.target).parent().find(`.valid`).each((i, item) => {
-  //     if ($(item).val().length === 0) {
-  //       $(item).addClass(`not-valid`);
-  //       droppingErr(item);
 
-  //     } else {
-  //       flag = true;
-  //     }
-  //   })
-
-  //   if (flag) {
-  //     sendForm(e);
-  //   }
-  // };
 
 
   // отправка форм
@@ -115,15 +99,51 @@ $(function () {
   }
 
 
-  //сброс ошибки
-  // const droppingErr = (item) => {
-  //   $(item).on(`click`, () => {
-  //     $(item).removeClass(`not-valid`);
-  //   })
-  // };
+
 
   // mask input tel
   $(`#phone`).inputmask("+7 (999) 999-99-99", { "placeholder": "_" });
+
+
+  // turn-content__link
+  const turn_link = $(`.turn-content__link`);
+  if (turn_link.length > 0) {
+    turn_link.on(`click`, (e) => {
+      e.preventDefault();
+      $(`.turn-content__description`).toggleClass(`turn-content__description--shadow`)
+      $(`.turn-content__link`).toggleClass(`turn-content__link--shadow`)
+      $(`.turn-content__link`).text((i, text) => {
+        return text === `Прочитать еще` ? `Скрыть` : `Прочитать еще`
+      })
+    })
+  }
+
+  // other__link--head
+  const other_link = $(`.other__link--head`);
+  const head = $(`.other__link--head`);
+  if ($(window).width() < 768 && head.length > 0) {
+    head.text((i, text) => {
+      return `Другие услуги`
+    })
+  }
+
+  if (other_link.length > 0) {
+    other_link.on(`click`, (e) => {
+      e.preventDefault()
+
+      if ($(window).width() < 768) {
+        $(`.other__list`).toggleClass(`other__list--show`)
+
+
+      }
+
+    })
+  }
+
+  $('.faq__accordion').accordion({
+    "transitionSpeed": 400
+  });
+
 
 
   // // confidence slider
