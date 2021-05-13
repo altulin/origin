@@ -1,6 +1,9 @@
 extends ../templates/_main.pug
 include ../helpers/mixins.pug
 
+  block body
+    - let body = true
+
   block link-active
     - page_index = true
     - modal_request = true

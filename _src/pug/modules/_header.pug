@@ -2,10 +2,11 @@ header.header#header
   .header__inner.container
     a.header__logo.logo(href="/index.html")
       figure.logo__img-wrap
-        +svg_my(`logo`, `logo__img tablet-hidden`)
-        +img-retina(`logo`, `png`, `логотип`, `logo__img tablet-visibility`, `161`, `54`)
+        //- +svg_my(`logo`, `logo__img tablet-hidden`)
+        //- +img-retina(`logo`, `png`, `логотип`, `logo__img tablet-visibility`, `161`, `54`)
+        +img-retina(`logo`, `png`, `логотип`, `logo__img`, `161`, `54`)
 
-      figure.logo__flag-wrap.tablet-hidden
+      //- figure.logo__flag-wrap.tablet-hidden
 
     p.header__slogan.size-0.tablet-hidden качественный ремонт<br> немецких автомобилей
 

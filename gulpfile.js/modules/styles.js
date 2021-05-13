@@ -23,11 +23,11 @@ module.exports.getStyleFile = () => {
     .pipe(sass())
     .pipe(concat(path.project.cssFile)) // Конкатенируем в файл
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
-    .pipe(gcmq()) // убираем лишние медиа запросы
+    // .pipe(gcmq()) // убираем лишние медиа запросы
     .pipe(sourcemaps.write(".")) //добавляем карту
     .pipe(dest(path.made.cssFolder)) // Выгрузим результат в папку
-    .pipe(cleancss({ level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ })) // Минифицируем стили
-    .pipe(rename(path.project.cssMinFile)) // переименуем в min
+    // .pipe(cleancss({ level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ })) // Минифицируем стили
+    // .pipe(rename(path.project.cssMinFile)) // переименуем в min
     .pipe(dest(path.made.cssFolder)) // Выгрузим результат в папку
 
     .pipe(browserSync.stream()) // Сделаем инъекцию в браузер

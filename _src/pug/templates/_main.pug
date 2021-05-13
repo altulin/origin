@@ -2,8 +2,8 @@ doctype html
 html(lang="ru")
 
   include ../modules/_head
-
-  body.page-body
+  block body
+  body.page-body(class=(body?`page-body--index`: ``))
     include ../helpers/arrays
 
     block link-active
