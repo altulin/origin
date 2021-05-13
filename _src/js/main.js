@@ -1,6 +1,5 @@
 $(function () {
   if ($(window).width() < 768) {
-    console.log($(window).width())
     $(`#header-nav`).css("display", "block")
   }
 
@@ -132,21 +131,4 @@ $(function () {
   $('.faq__accordion').accordion({
     "transitionSpeed": 0
   });
-
-  const header = document.getElementById("header")
-
-  if (header) {
-    let prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        header.style.top = "0";
-      } else {
-        header.style.top = "-60px";
-      }
-      prevScrollpos = currentScrollPos;
-    }
-  }
-
-
 });

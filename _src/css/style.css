@@ -1928,8 +1928,8 @@ button {
   max-width: 1270px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .hover-opacity {
@@ -2371,14 +2371,14 @@ button {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 74%;
-  right: -325px;
+  width: 100%;
+  right: -350px;
 }
 
 .promo__img-wrap {
   width: 100%;
   position: relative;
-  padding-top: 71%;
+  padding-top: 58%;
 }
 
 .promo__img {
@@ -2391,7 +2391,7 @@ button {
 
 .video-box {
   position: absolute;
-  left: 44%;
+  left: 35%;
   top: 60%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -3005,6 +3005,7 @@ button {
   right: calc(((100vw - 1270px) / 2) + 100px);
   border: 1px solid #9593A5;
   border-radius: 50%;
+  z-index: 1;
 }
 
 .form__block + div {
@@ -4149,6 +4150,10 @@ button {
   flex-grow: 1;
 }
 
+.conacts-map__inner iframe {
+  height: 100%;
+}
+
 .footer {
   background-color: rgba(63, 64, 72, 0.2);
 }
@@ -4330,12 +4335,6 @@ button {
   .glightbox-clean .gclose {
     opacity: .7;
     right: 20px;
-  }
-}
-
-@media screen and (max-width: 1920px) {
-  .promo__right-col {
-    right: calc((1270px - 100vw) / 2);
   }
 }
 
@@ -4758,7 +4757,7 @@ button {
   }
 
   .modal a.close-modal {
-    top: 50px;
+    top: 80px;
     right: 50px;
   }
 
@@ -4768,7 +4767,7 @@ button {
   }
 
   .blocker.current .modal-promotions {
-    padding-top: 20px;
+    padding-top: 80px;
     padding-bottom: 20px;
   }
 
@@ -4966,7 +4965,7 @@ button {
 
   .turn-contacts__map {
     padding-top: 0;
-    height: 400px;
+    height: 500px;
   }
 
   .contacts {
@@ -5007,6 +5006,10 @@ button {
 
   .contacts__soc {
     max-width: none;
+  }
+
+  .conacts-map__inner {
+    height: 500px;
   }
 
   .footer__top-inner {
@@ -5085,7 +5088,7 @@ button {
   }
 
   .modal a.close-modal {
-    top: 30px;
+    top: 90px;
     right: 30px;
   }
 

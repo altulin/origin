@@ -1,16 +1,6 @@
 .contacts
   position: relative
 
-  // &::after
-  //   position: absolute
-  //   content: ""
-  //   width: 100%
-  //   height: 100%
-  //   left: 0
-  //   top: 0
-  //   background-image: url(/img/contacts-1.png)
-  //   background-position: 0 100%
-
   +mw(768)
     padding-top: 50px
 
@@ -115,3 +105,9 @@
 
   &__inner
     flex-grow: 1
+
+    & iframe
+      height: 100%
+
+    +mw(768)
+      height: 500px
