@@ -1,0 +1,6 @@
+section.hide-menu
+  ul.hide-menu__list.container
+    each item, i in header_nav
+          li.hide-menu__item
+            a.hide-menu__link.size-1(href=`${item[1]}` class=(i===0?`hide-menu__link--current`:``))
+              span.hide-menu__link-text= `${item[0]}`

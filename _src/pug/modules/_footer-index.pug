@@ -1,6 +1,6 @@
 foter.footer-index
-  ul.footer-index__list.container   
+  ul.footer-index__list.container
     each item, i in header_nav
           li.footer-index__item
-            a.footer-index__link.hover-opacity.size-1(href=`${item[1]}` class=(i===0?`footer-index__link--current`:``))
+            a.footer-index__link.size-1(href=`${item[1]}` class=(i===0?`footer-index__link--current`:``))
               span.footer-index__link-text= `${item[0]}`

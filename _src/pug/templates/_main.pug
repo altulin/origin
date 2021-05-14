@@ -21,6 +21,9 @@ html(lang="ru")
     else
       main.page-main(class=(turn == true?`page-main--turn`:``) class=(contacts == true?`page-main--contacts`:``))
         block content
+        block link-active
+        if !contacts
+          include ../modules/_hide-menu
 
 
     block link-active

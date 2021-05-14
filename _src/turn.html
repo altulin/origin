@@ -180,7 +180,7 @@
           <h2 class="faq__title">Популярные вопросы</h2>
           <div class="faq__group" data-accordion-group>
             <div class="faq__accordion" data-accordion>
-              <button class="faq__btn hover-opacity" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
+              <button class="faq__btn" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
               </button>
               <div class="faq__content" data-content>
                 <p>Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет
@@ -190,7 +190,7 @@
           </div>
           <div class="faq__group" data-accordion-group>
             <div class="faq__accordion" data-accordion>
-              <button class="faq__btn hover-opacity" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
+              <button class="faq__btn" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
               </button>
               <div class="faq__content" data-content>
                 <p>Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет
@@ -200,7 +200,7 @@
           </div>
           <div class="faq__group" data-accordion-group>
             <div class="faq__accordion" data-accordion>
-              <button class="faq__btn hover-opacity" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
+              <button class="faq__btn" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
               </button>
               <div class="faq__content" data-content>
                 <p>Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет
@@ -210,7 +210,7 @@
           </div>
           <div class="faq__group" data-accordion-group>
             <div class="faq__accordion" data-accordion>
-              <button class="faq__btn hover-opacity" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
+              <button class="faq__btn" type="button" data-control>Какие рекомендации стоит учитывать при подборе АКБ?<span class="faq__circle"></span>
               </button>
               <div class="faq__content" data-content>
                 <p>Основным характеристиками для выбора аккумуляторной батареи должны быть: его габаритные размеры, расположение (или полярность) и толщина клейм, емкость аккумулятора и пусковой ток. Обычно, для легковых автомобилей емкость АКБ составляет
@@ -232,11 +232,21 @@
               </a>
             </div>
           </div>
-          <div class="turn-contacts__map">
-            <iframe src="https://snazzymaps.com/embed/311338" width="100%" height="600px" style="border:none;"></iframe>
-          </div>
+          <div class="turn-contacts__map" id="map"></div>
         </div>
       </div>
+    </section>
+    <section class="hide-menu">
+      <ul class="hide-menu__list container">
+        <li class="hide-menu__item"><a class="hide-menu__link size-1 hide-menu__link--current" href="/services.html"><span class="hide-menu__link-text">услуги</span></a>
+        </li>
+        <li class="hide-menu__item"><a class="hide-menu__link size-1" href="/promotions.html"><span class="hide-menu__link-text">акции</span></a>
+        </li>
+        <li class="hide-menu__item"><a class="hide-menu__link size-1" href="/warranty.html"><span class="hide-menu__link-text">гарантии</span></a>
+        </li>
+        <li class="hide-menu__item"><a class="hide-menu__link size-1" href="/contacts.html"><span class="hide-menu__link-text">контакты</span></a>
+        </li>
+      </ul>
     </section>
   </main>
   <footer class="footer">
@@ -315,6 +325,7 @@
       </div>
     </div>
   </section>
+  <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
   <script src="/js/script.js" type="module"></script>
 </body>
 

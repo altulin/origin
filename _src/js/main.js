@@ -131,4 +131,65 @@ $(function () {
   $('.faq__accordion').accordion({
     "transitionSpeed": 0
   });
+
+  let map;
+
+  if ($(`#map`).length > 0) {
+    DG.then(function () {
+      map = DG.map('map', {
+        center: [52.266605, 104.220707],
+        zoom: 15,
+        scrollWheelZoom: false
+      });
+
+      const myIcon = DG.icon({
+        iconUrl: '/img/marker.png',
+        iconSize: [48, 60]
+      });
+
+      DG.marker([52.266605, 104.220707], {
+        // draggable: true,
+        icon: myIcon
+      }).addTo(map);
+
+    })
+  }
+
+  // header top fixed
+  const header = $(`#header`);
+
+  if (header.length > 0) {
+
+    if ($(window).width() < 768) {
+      $('#header').scrollUpMenu({
+        waitTime: 40,
+        transitionTime: 0,
+        menuCss: { 'position': '', 'top': '' }
+      });
+    }
+
+  }
+
+
+  const hide_menu = $(`.hide-menu`);
+  if (hide_menu.length > 0) {
+
+    if ($(window).width() > 1000) {
+      $('.hide-menu').scrollUpMenu({
+        waitTime: 50,
+        transitionTime: 0,
+        menuCss: { 'position': 'fixed', 'bottom': '0' }
+      });
+    }
+
+  }
+
+
+
+
+
+
+
+
+
 });
