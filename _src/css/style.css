@@ -1702,7 +1702,6 @@ button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background-color: #010101;
   padding-top: 150px; }
   @media screen and (max-width: 768px) {
     .page-main {
@@ -2615,6 +2614,7 @@ button {
     .warranty__content li {
       color: rgba(176, 179, 198, 0.8);
       font-size: 18px;
+      line-height: 28px;
       font-weight: 300;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2626,7 +2626,8 @@ button {
     .warranty__content p {
       color: rgba(176, 179, 198, 0.8);
       font-size: 18px;
-      font-weight: 300; }
+      font-weight: 300;
+      line-height: 28px; }
       .warranty__content p + p {
         margin-top: 20px; }
     .warranty__content h3 {
@@ -2720,6 +2721,9 @@ button {
                 align-items: flex-start;
         padding-top: 100px;
         overflow: auto; } }
+  @media screen and (max-width: 768px) {
+    .blocker.current .modal-request {
+      padding-top: 130px; } }
   .blocker::before {
     content: none; }
 
@@ -2792,7 +2796,7 @@ button {
   .modal-request__right-col {
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 68%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -2817,6 +2821,8 @@ button {
     height: 100%;
     left: 0;
     top: 0; }
+  .modal-request a.close-modal[rel="modal:close"] {
+    top: 80px; }
 
 .modal {
   border-radius: 0;
@@ -2998,8 +3004,11 @@ button {
   overflow: auto; }
   @media screen and (max-width: 768px) {
     .blocker.current .modal-promotions {
-      padding-top: 80px;
-      padding-bottom: 20px; } }
+      padding-top: 60px;
+      padding-bottom: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0; } }
 
 .modal-promotions {
   padding-left: 20px;
@@ -3011,6 +3020,10 @@ button {
     border-radius: 20px;
     border: 2px solid #332E33;
     background-color: #201B20; }
+    @media screen and (max-width: 768px) {
+      .modal-promotions__inner {
+        border: none;
+        border-radius: 0; } }
   .modal-promotions__img-wrap {
     width: 100%;
     padding-top: 40%;
@@ -3087,8 +3100,8 @@ button {
         top: 200px; } }
     @media screen and (max-width: 768px) {
       .modal-promotions a.close-modal {
-        top: 50px;
-        right: 50px; } }
+        top: 80px;
+        right: 30px; } }
 
 .promotions {
   position: relative; }
@@ -3266,7 +3279,8 @@ button {
                 filter: blur(400px);
         border-radius: 20px;
         left: 50%;
-        z-index: 1; }
+        z-index: 1;
+        pointer-events: none; }
   .services__picture {
     width: 50%; }
     @media screen and (max-width: 768px) {
@@ -3299,7 +3313,9 @@ button {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    padding-right: 15px; }
+    padding-right: 15px;
+    position: relative;
+    z-index: 1; }
     @media screen and (max-width: 768px) {
       .services__content {
         width: 100%;
@@ -3388,7 +3404,8 @@ button {
   .turn-promo__img {
     position: absolute;
     width: 100%;
-    height: 100%l0;
+    height: 100%;
+    left: 0;
     top: 0; }
 
 .turn-content {
@@ -3409,10 +3426,12 @@ button {
             justify-content: space-between;
     margin-bottom: 48px; }
   .turn-content__title {
-    max-width: 464px; }
+    max-width: 464px;
+    text-align: center; }
     @media screen and (max-width: 600px) {
       .turn-content__title {
-        font-size: 20px; } }
+        font-size: 20px;
+        margin-right: 15px; } }
   .turn-content__down .down__img-wrap {
     -webkit-animation: bounce 2s infinite;
             animation: bounce 2s infinite; }
@@ -3440,7 +3459,8 @@ button {
         background-image: linear-gradient(180deg, rgba(1, 1, 1, 0) 0%, #010101 100%); }
     .turn-content__description p {
       color: rgba(176, 179, 198, 0.8);
-      font-weight: 300; }
+      font-weight: 300;
+      font-size: 18px; }
       .turn-content__description p + p {
         margin-top: 20px; }
   .turn-content__link {
@@ -3467,6 +3487,9 @@ button {
 
 .turn-services {
   margin-bottom: 100px; }
+  @media screen and (max-width: 768px) {
+    .turn-services {
+      margin-bottom: 60px; } }
   .turn-services__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3511,15 +3534,11 @@ button {
       font-size: 18px;
       color: rgba(176, 179, 198, 0.8);
       font-weight: 400; }
-      @media screen and (max-width: 600px) {
-        .turn-services__item p {
-          font-size: 16px; } }
     .turn-services__item span {
       font-size: 18px;
       font-weight: 400; }
       @media screen and (max-width: 600px) {
         .turn-services__item span {
-          font-size: 16px;
           -ms-flex-negative: 0;
               flex-shrink: 0;
           margin-left: 10px; } }
@@ -3613,6 +3632,9 @@ button {
 
 .turn-record {
   margin-bottom: 100px; }
+  @media screen and (max-width: 768px) {
+    .turn-record {
+      margin-bottom: 60px; } }
 
 .record {
   display: -webkit-box;
@@ -3626,7 +3648,7 @@ button {
           -ms-flex-direction: column;
               flex-direction: column; } }
   .record__col-left {
-    max-width: 350px;
+    max-width: 315px;
     width: 100%; }
 
 .car {
@@ -3640,19 +3662,20 @@ button {
   margin-right: 10px; }
   @media screen and (max-width: 768px) {
     .car {
-      margin-bottom: 30px;
       -ms-flex-item-align: center;
           -ms-grid-row-align: center;
-          align-self: center; } }
+          align-self: center;
+      margin-right: 0; } }
   .car__logo {
     display: block;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    z-index: 1; }
+    z-index: 1;
+    margin-bottom: -40px; }
   .car__img-wrap {
     width: 100%;
-    padding-top: 58%;
+    padding-top: 69%;
     position: relative; }
   .car__img {
     position: absolute;
@@ -3735,6 +3758,9 @@ button {
 
 .turn-faq {
   margin-bottom: 100px; }
+  @media screen and (max-width: 768px) {
+    .turn-faq {
+      margin-bottom: 60px; } }
 
 .faq {
   max-width: 777px; }
@@ -4026,8 +4052,8 @@ button {
             -ms-flex-pack: center;
                 justify-content: center; } }
   .footer__logo {
-    width: 132px;
-    height: 18px; }
+    width: 161px;
+    height: 54px; }
     @media screen and (max-width: 768px) {
       .footer__logo {
         width: 161px;

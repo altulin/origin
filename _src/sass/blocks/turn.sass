@@ -21,7 +21,8 @@
   &__img
     position: absolute
     width: 100%
-    height: 100%l0
+    height: 100%
+    left: 0
     top: 0
 
 .turn-content
@@ -39,9 +40,11 @@
 
   &__title
     max-width: 464px
+    text-align: center
 
     +mw(600)
       font-size: 20px
+      margin-right: 15px
 
   &__down
 
@@ -70,6 +73,7 @@
     & p
       color: rgba(#B0B3C6,0.8)
       font-weight: 300
+      font-size: 18px
 
       & + p
         margin-top: 20px
@@ -98,6 +102,9 @@
 
 .turn-services
   margin-bottom: 100px
+
+  +mw(768)
+    margin-bottom: 60px
 
   &__inner
     display: flex
@@ -137,14 +144,14 @@
       font-weight: 400
 
       +mw(600)
-        font-size: 16px
+        // font-size: 16px
 
     span
       font-size: 18px
       font-weight: 400
 
       +mw(600)
-        font-size: 16px
+        // font-size: 16px
         flex-shrink: 0
         margin-left: 10px
 
@@ -232,6 +239,9 @@
 .turn-record
   margin-bottom: 100px
 
+  +mw(768)
+    margin-bottom: 60px
+
 .record
   display: flex
   max-width: 777px
@@ -240,7 +250,7 @@
     flex-direction: column
 
   &__col-left
-    max-width: 350px
+    max-width: 315px
     width: 100%
 
   &__col-right
@@ -251,17 +261,18 @@
   margin-right: 10px
 
   +mw(768)
-    margin-bottom: 30px
     align-self: center
+    margin-right: 0
 
   &__logo
     display: block
     align-self: center
     z-index: 1
+    margin-bottom: -40px
 
   &__img-wrap
     width: 100%
-    padding-top: 58%
+    padding-top: 69%
     position: relative
 
   &__img
@@ -335,6 +346,9 @@
 
 .turn-faq
   margin-bottom: 100px
+
+  +mw(768)
+    margin-bottom: 60px
 
 .faq
   max-width: 777px

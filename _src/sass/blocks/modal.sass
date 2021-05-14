@@ -17,6 +17,10 @@
         padding-top: 100px
         overflow: auto
 
+    .modal-request
+      +mw(768)
+        padding-top: 130px
+
   &::before
     content: none
 
@@ -81,7 +85,7 @@
   &__right-col
     position: absolute
     right: 0
-    top: 50%
+    top: 68%
     transform: translateY(-50%)
     width: 70%
 
@@ -104,6 +108,9 @@
     height: 100%
     left: 0
     top: 0
+
+  & a.close-modal[rel="modal:close"]
+    top: 80px
 
 .modal
   border-radius: 0
@@ -263,8 +270,11 @@
     overflow: auto
 
     +mw(768)
-      padding-top: 80px
+      padding-top: 60px
       padding-bottom: 20px
+      padding-left: 0
+      padding-right: 0
+      padding-bottom: 0
 
 .modal-promotions
   padding-left: 20px
@@ -277,6 +287,10 @@
     border-radius: 20px
     border: 2px solid #332E33
     background-color: #201B20
+
+    +mw(768)
+      border: none
+      border-radius: 0
 
   &__img-wrap
     width: 100%
@@ -360,5 +374,5 @@
       top: 200px
 
     +mw(768)
-      top: 50px
-      right: 50px
+      top: 80px
+      right: 30px

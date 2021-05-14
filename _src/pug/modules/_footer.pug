@@ -1,16 +1,16 @@
-footer.footer   
+footer.footer
   .footer__inner
 
     .footer__top
       .footer__top-inner.container
-        a.footer__logo.logo(href="/index.html") 
-          figure.logo__img-wrap   
-            +svg_my(`logo`, `logo__img tablet-hidden`)
-            +img-retina(`logo`, `png`, `логотип`, `logo__img tablet-visibility`, `161`, `54`)
-          figure.logo__flag-wrap.tablet-hidden
+        a.footer__logo.logo(href="/index.html")
+          figure.logo__img-wrap
+            //- +svg_my(`logo`, `logo__img tablet-hidden`)
+            +img-retina(`logo`, `png`, `логотип`, `logo__img`, `161`, `54`)
+          //- figure.logo__flag-wrap.tablet-hidden
         p.footer__slogan.size-0.tablet-hidden качественный ремонт<br> немецких автомобилей
 
-        ul.footer__list 
+        ul.footer__list
           each item, i in header_nav
             li.footer__item
               a.footer__link.hover-opacity.size-1(href=`${item[1]}` class=(i===0?`footer__link--current`:``))
