@@ -47,8 +47,6 @@ $(function () {
       drawer.close();
       $('#modal-request').modal();
     });
-
-
   }
 
 
@@ -88,9 +86,6 @@ $(function () {
     e.target.reset();
     $('#modal-thanks').modal();
   }
-
-
-
 
   // mask input tel
   $(`#phone`).inputmask("+7 (999) 999-99-99", { "placeholder": "_" });
@@ -167,7 +162,6 @@ $(function () {
         menuCss: { 'position': '', 'top': '' }
       });
     }
-
   }
 
 
@@ -181,15 +175,5 @@ $(function () {
         menuCss: { 'position': 'fixed', 'bottom': '0' }
       });
     }
-
   }
-
-
-
-
-
-
-
-
-
 });

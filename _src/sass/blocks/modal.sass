@@ -4,6 +4,7 @@
   display: flex
   flex-direction: column
   min-height: 100%
+  z-index: 10
 
   &.current
 
@@ -19,7 +20,7 @@
 
     .modal-request
       +mw(768)
-        padding-top: 130px
+        padding-top: 100px
 
   &::before
     content: none
@@ -65,6 +66,12 @@
   &__title
     margin-bottom: 30px
 
+    +mw(768)
+      text-align: center
+
+    +mw(320)
+      font-size: 22px
+
   &__text
     font-weight: 300
     font-size: 18px
@@ -75,6 +82,9 @@
     +mw(768)
       text-align: center
       margin-bottom: 50px
+
+    +mw(320)
+      font-size: 16px
 
   &__form
     max-width: 330px
@@ -112,6 +122,11 @@
   & a.close-modal[rel="modal:close"]
     top: 80px
 
+    +mw(768)
+      // left: 50%
+      // transform: translateX(-50%)
+      top: 30px
+
 .modal
   border-radius: 0
   background-color: #010101
@@ -145,7 +160,7 @@
       right: 50px
 
     +mw(600)
-      top: 90px
+      top: 30px
       right: 30px
 
 .form
@@ -175,7 +190,7 @@
       color: #F9F9F9
       font-size: 18px
       font-weight: 300
-      padding-bottom: 20px
+      // padding-bottom: 20px
 
   &__btn
     margin-top: 40px
@@ -270,7 +285,7 @@
     overflow: auto
 
     +mw(768)
-      padding-top: 60px
+      padding-top: 0
       padding-bottom: 20px
       padding-left: 0
       padding-right: 0
@@ -374,5 +389,5 @@
       top: 200px
 
     +mw(768)
-      top: 80px
+      top: 30px
       right: 30px
