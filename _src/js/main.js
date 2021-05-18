@@ -133,16 +133,16 @@ $(function () {
     DG.then(function () {
       map = DG.map('map', {
         center: [52.266605, 104.220707],
-        zoom: 15,
+        zoom: 17,
         scrollWheelZoom: false
       });
 
       const myIcon = DG.icon({
-        iconUrl: '/img/marker.png',
-        iconSize: [48, 60]
+        iconUrl: '/img/marker-logo.png',
+        iconSize: [120, 51]
       });
 
-      DG.marker([52.266605, 104.220707], {
+      DG.marker([52.26685, 104.220707], {
         // draggable: true,
         icon: myIcon
       }).addTo(map);
